@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'prj_login.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',  
+        'NAME': os.getenv('DB_NAME_PRJ_LOGIN'),      
+        'USER': os.getenv('DB_USER_PRJ_LOGIN'),             
+        'PASSWORD': os.getenv('DB_PASSWORD_PRJ_LOGIN'),        
+        'HOST': os.getenv('DB_HOST_PRJ_LOGIN'),                   
+        'PORT': os.getenv('DB_PORT_PRJ_LOGIN'),                        
     }
 }
 
