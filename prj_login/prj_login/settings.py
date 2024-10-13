@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app_login',
 ]
 
 MIDDLEWARE = [
@@ -77,11 +78,11 @@ WSGI_APPLICATION = 'prj_login.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  
-        'NAME': os.getenv('DB_NAME_PRJ_LOGIN'),      
-        'USER': os.getenv('DB_USER_PRJ_LOGIN'),             
-        'PASSWORD': os.getenv('DB_PASSWORD_PRJ_LOGIN'),        
-        'HOST': os.getenv('DB_HOST_PRJ_LOGIN'),                   
-        'PORT': os.getenv('DB_PORT_PRJ_LOGIN'),                        
+        'NAME': os.getenv('DB_NAME_LOGIN_APP'),      
+        'USER': os.getenv('DB_USER_LOGIN_APP'),             
+        'PASSWORD': os.getenv('DB_PASSWORD_LOGIN_APP'),        
+        'HOST': os.getenv('DB_HOST_LOGIN_APP'),                   
+        'PORT': os.getenv('DB_PORT_LOGIN_APP'),                        
     }
 }
 
